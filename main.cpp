@@ -696,13 +696,14 @@ int main()
   cout << "Please prepare iTunes for Bird Songs, etc." << endl;
   cin >> junk;
 
-  learn("flashcards",quit,24.0); // begin reviewing 24 hours after learning
+
+  learn("bird_songs",quit,24.0); //review 24 days after first
+  if(quit == false)
+    learn("flashcards",quit,24.0); // begin reviewing 24 hours after learning
   if(quit == false)
     learn("astroph",quit,24.0); //review 24 days after first
   if(quit == false)
     learn("readings",quit,24.0); //review 24 days after first
-  if(quit == false)
-    learn("bird_songs",quit,24.0); //review 24 days after first
   if(quit == false)
     learn("history",quit,24.0); //review 24 days after first
   if(quit == false)
