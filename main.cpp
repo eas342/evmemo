@@ -705,6 +705,8 @@ int main()
   if(quit == false)
     learn("readings",quit,24.0); //review 24 days after first
   if(quit == false)
+    learn("geography",quit,24.0); //review 24 days after first
+  if(quit == false)
     learn("history",quit,24.0); //review 24 days after first
   if(quit == false)
     learn("classes10/statmech",quit,24.0*2.0); //review 2 days after first
