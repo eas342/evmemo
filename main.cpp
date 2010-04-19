@@ -701,6 +701,8 @@ int main()
   if(quit == false)
     learn("flashcards",quit,24.0); // begin reviewing 24 hours after learning
   if(quit == false)
+    learn("quotes_n_lit",quit,24.0); //review 24 days after first
+  if(quit == false)
     learn("astroph",quit,24.0); //review 24 days after first
   if(quit == false)
     learn("readings",quit,24.0); //review 24 days after first
