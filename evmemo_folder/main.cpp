@@ -178,6 +178,9 @@ void show(string input)
       s2.assign(input,i+4,input.size());
       //      cout << s2 << endl;
       system(s2.c_str());
+      system("sleep 0.05");
+      system("open graphics/blocker.txt");
+
       system("open /Applications/Utilities/Terminal.app");
       s3.assign(input,0,i);
       cout << s3 << endl; //Show everything before "cmd:"
@@ -691,11 +694,15 @@ int main()
   cout << "*******************" << endl << endl ;
 
   srand(time(0));
+  //  if(coutn("bird_songs") - numlines("bird_songs/stats.stat") > 0) //Number new cards
+
   system("open ~/Music/iTunes/\"iTunes Media\"/Music/\"Ohio Division Of Wildlife\"/\"Bird Songs - Common Birds Of Ohio\"/\"48 Hermil Thrush.mp3\"");
   system("open /Applications/Utilities/Terminal.app");
   cout << "Please prepare iTunes for Bird Songs, etc." << endl;
   cin >> junk;
-  system("open graphics/kamtori.png &");
+
+  system("open graphics/blocker.txt");
+  system("open /Applications/Utilities/Terminal.app");
   cout << "Please prepare graphics" << endl;
   cin >> junk;
 
@@ -704,6 +711,8 @@ int main()
     learn("flashcards",quit,24.0); // begin reviewing 24 hours after learning
   if(quit == false)
     learn("quotes_n_lit",quit,24.0); //review 24 days after first
+  if(quit == false)
+    learn("medical",quit,24.0); //review 24 days after first
   if(quit == false)
     learn("astroph",quit,24.0); //review 24 days after first
   if(quit == false)
