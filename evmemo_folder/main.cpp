@@ -700,7 +700,7 @@ int main()
   system("open /Applications/Utilities/Terminal.app");
   cout << "Please prepare iTunes for Bird Songs, etc." << endl;
   cin >> junk;
-
+  system("open graphics/blocker.png");
   system("open graphics/blocker.txt");
   system("open /Applications/Utilities/Terminal.app");
   cout << "Please prepare graphics" << endl;
@@ -721,6 +721,8 @@ int main()
     learn("geography",quit,24.0); //review 24 days after first
   if(quit == false)
     learn("history",quit,24.0); //review 24 days after first
+  if(quit == false)
+    learn("night_sky",quit,24.0); //review 24 days after first
   if(quit == false)
     learn("classes10/statmech",quit,24.0*2.0); //review 2 days after first
   if(quit == false)
