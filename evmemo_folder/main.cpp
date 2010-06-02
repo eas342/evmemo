@@ -700,7 +700,7 @@ int main()
   system("open /Applications/Utilities/Terminal.app");
   cout << "Please prepare iTunes for Bird Songs, etc." << endl;
   cin >> junk;
-  system("open graphics/blocker.png");
+  system("open -g graphics/blocker.png");
   system("open graphics/blocker.txt");
   system("open /Applications/Utilities/Terminal.app");
   cout << "Please prepare graphics" << endl;
