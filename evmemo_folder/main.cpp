@@ -177,8 +177,10 @@ void show(string input)
 //      cout << "Will execute this:" << endl;
       s2.assign(input,i+4,input.size());
       //      cout << s2 << endl;
+      //      system("open graphics/blocker.txt");      
+      //      system("sleep 0.05");
       system(s2.c_str());
-      system("sleep 0.05");
+      system("sleep 0.3");
       system("open graphics/blocker.txt");
 
       system("open /Applications/Utilities/Terminal.app");
