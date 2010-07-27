@@ -703,6 +703,7 @@ int main()
   cout << "Please prepare iTunes for Bird Songs, etc." << endl;
   cin >> junk;
   system("open -g graphics/blocker.png");
+  system("sleep 0.4");
   system("open graphics/blocker.txt");
   system("open /Applications/Utilities/Terminal.app");
   cout << "Please prepare graphics" << endl;
@@ -733,7 +734,10 @@ int main()
     learn("classes10/compphys",quit,24.0*2.0); //review 2 days after first
   if(quit == false)
     learn("classes10/astrophproc",quit,24.0*2.0); //review 2 days after first
-
+  if(quit == false)
+    learn("classes10/sum_astrostats",quit,24.0*2.0); //review 2 days after first
+  if(quit == false)
+    learn("classes10/sagan_workshop10",quit,24.0*2.0); //review 2 days after first
 
 
   cout << "Goodbye!" << endl;
