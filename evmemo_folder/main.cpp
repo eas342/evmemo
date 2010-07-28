@@ -737,7 +737,7 @@ int main()
   if(quit == false)
     learn("classes10/sum_astrostats",quit,24.0*2.0); //review 2 days after first
   if(quit == false)
-    learn("classes10/sagan_workshop10",quit,24.0*2.0); //review 2 days after first
+    learn("sagan_workshop10",quit,24.0*2.0); //review 2 days after first
 
 
   cout << "Goodbye!" << endl;
