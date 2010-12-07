@@ -1,0 +1,81 @@
+\documentclass[twocolumn]{emulateapj}
+%\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+%geometry{letterpaper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+%\usepackage{graphicx}
+%\usepackage{amssymb}
+%\usepackage{epstopdf}
+%\usepackage{acronym}
+%\bibliographystyle{apj}
+%\usepackage{shortcuts}
+%\usepackage{cite}
+%\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+\shorttitle{Hoe Jupiter Inflation}
+\shortauthors{Schlawin}
+\begin{document}
+\title{Hot Jupiter Inflation Models With MESA}
+\author{Everett Schlawin}
+%\date{}                                           % Activate to display a given date or no date
+\bibliographystyle{apj}
+\begin{abstract}
+Mass Radius Relation
+\end{abstract}
+\keywords{extrasolar planets -- brown dwarfs}
+\maketitle
+\section{Introduction}
+
+Since the discovery of the first planet to transit its host star (HD209458b) \citep{charb,henry2000}, we have been able to study exoplanet properties empirically. Transits provide opportunities to measure radii, atmospheric compositions, spin-orbital alignment, winds, mass loss and perturbations due to additional bodies. This wealth of information has traditionally followed radial velocity methods of planet hunting, but with the launch of Kepler \citep{borucki}, Corot and the HAT network \citep{bakos} planets are now being detected via transits.
+
+The transit observations have revealed planet radii for some 70 planetary systems \footnote{http://exoplanets.org/} and the results shocked the astrophysics community. Rather than the accepted paradigm, that planet radii peaking at 1 Jupiter radius, $R_J$, exoplanet radii were found to vary widely from 0.7 $R_J$ to 1.7 $R_J$ for masses from 0.5 $M_J$ to 10 $M_J$. A consistent and accepted theory to explain these radii has still not been found.
+
+This paper describes the theoretical Radius-Mass relation and the observations that shook up this paradigm. I briefly summarize a few new models that try to explain the larger than expected radii and then attempt to verify their claims about heating using the stellar structure code MESA.
+
+\section{Theoretical Mass-Radius Relation}
+The most famous and cited treatise on the mass radius relation is \citet{zapolsky}. In this work, they argue that the mass of a cold star/planet/brown dwarf peaks around 1 Jupiter radius, as seen in Figure \ref{zapolfig}. To understand why these curves peak, one can examine the low mass and high mass extremes. For low mass planets, where the pressure is due to Coulomb interactions, the central material is essentially incompressible. For these planets
+\begin{equation}
+\rho \approx \frac{M}{\frac{4}{3} \pi R^3} \approx constant
+\end{equation}
+where $\rho$ is the approximately uniform density.
+Therefore, for this kind of equation of state, the radius grows as
+\begin{equation}
+R \propto M^{1/3}
+\end{equation}
+. At large masses, the core becomes electron degenerate. If we assume non-relativistic electrons, each one has energy $\epsilon = p^2/2 m_e$. Using the Heisenberg uncertainty principle, $\sigma_p \sigma_x \approx p x = \hbar$. The electron density is
+\begin{equation}
+n_e = \frac{1}{x^3}
+\end{equation}
+so each particle has an energy $\epsilon = n_e^{2/3} \hbar^2 / 2m_e$. The Virial Theorem says
+\begin{equation}\label{vt}
+\zeta E_i = - E_g \approx \frac{G M^2}{R}
+\end{equation}
+where $E_i$ is the internal energy, $E_g$ is the gravitational potential energy and $\zeta$ is a dimensionless parameter \citep{kippenhahn}. If there are $\sim M/m_p$ particles where $M$ is the total mass and $m_p$ is the mass of a proton, then the total internal energy is
+\begin{equation} \label{intE}
+E_i = \frac{M}{m_p} \epsilon = \frac{M n_e^{2/3} \hbar^2}{2 m_p m_e}
+\end{equation}
+Using Equation \ref{vt} and \ref{intE}, the fact that the $n_e \propto M/R^3$ the mass-radius relation for a degenerate brown dwarf is 
+\begin{equation}
+R \propto M^{-1/3}
+\end{equation}
+
+\begin{figure}[!htbp]
+\begin{center}
+%\subfigure[Tonight 8:52 PM]{ \includegraphics[width=2.75in]{zapolsky_result.pdf}  }
+\vspace{0.2in}
+\includegraphics[width=2.75in]{zapolsky_result.pdf}
+\caption{\citet{zapolsky} computer simulation of a "Cold sphere" with different compositions.}
+\label{zapolfig}
+\end{center}
+\end{figure}
+
+\section{Observations}
+\section{Ohmic Dissipation}
+\section{Thermal Tides}
+\section{MESA Results}
+\subsection{The Exoplanet XO-3b}
+\section{Conclusion}
+\bibliography{hotjup}
+%\bibliographystyle{plain}
+
+\end{document}  
+
