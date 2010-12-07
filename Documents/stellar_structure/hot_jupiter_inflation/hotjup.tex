@@ -27,14 +27,39 @@
 \maketitle
 \section{Introduction}
 
-Since the discovery of the first planet to transit its host star (HD209458b) \citep{charb,henry2000}, we have been able to study exoplanet properties empirically. Transits provide opportunities to measure radii, atmospheric compositions, spin-orbital alignment, winds, mass loss and perturbations due to additional bodies. This wealth of information has traditionally followed radial velocity methods of planet hunting, but with the launch of Kepler \citep{borucki}, Corot and the HAT network \citep{bakos} planets are now being detected via transits.
+Since the discovery of the first planet to transit its host star
+(HD209458b) \citep{charb,henry2000}, we have been able to study
+exoplanet properties empirically. Transits provide opportunities to
+measure radii, atmospheric compositions, spin-orbital alignment,
+winds, mass loss and perturbations due to additional bodies. This
+wealth of information has traditionally followed radial velocity
+methods of planet hunting, but with the launch of Kepler
+\citep{borucki}, Corot and the HAT network \citep{bakos} planets are
+now being detected via transits.
 
-The transit observations have revealed planet radii for some 70 planetary systems\footnote{http://exoplanets.org/} and the results shocked the astrophysics community. Rather than the accepted paradigm, that planet radii peaking at 1 Jupiter radius, $R_J$, exoplanet radii were found to vary widely from 0.7 $R_J$ to 1.7 $R_J$ for masses from 0.5 $M_J$ to 10 $M_J$. A consistent and accepted theory to explain these radii has still not been found.
+The transit observations have revealed planet radii for some 70
+planetary systems\footnote{http://exoplanets.org/} and the results
+shocked the astrophysics community. Rather than the accepted paradigm,
+that planet radii peaking at 1 Jupiter radius, $R_J$, exoplanet radii
+were found to vary widely from 0.7 $R_J$ to 1.7 $R_J$ for masses from
+0.5 $M_J$ to 10 $M_J$. A consistent and accepted theory to explain
+these radii has still not been found.
 
-This paper describes the theoretical Radius-Mass relation and the observations that shook up this paradigm. I briefly summarize a few new models that try to explain the larger than expected radii and then attempt to verify their claims about heating using the stellar structure code MESA.
+This paper describes the theoretical Radius-Mass relation and the
+observations that shook up this paradigm. I briefly summarize a few
+new models that try to explain the larger than expected radii and then
+attempt to verify their claims about heating using the stellar
+structure code MESA.
 
 \section{Theoretical Mass-Radius Relation}
-The most famous and cited treatise on the mass radius relation is \citet{zapolsky}'s work ``The Mass-Radius Relation For Cold Spheres of Low Mass''. In this work, they argue that the mass of a cold star/planet/brown dwarf peaks around 1 Jupiter radius, as seen in Figure \ref{zapolfig}. To understand why these curves peak, one can examine the low mass and high mass extremes. For low mass planets, where the pressure is due to Coulomb interactions, the central material is essentially incompressible. For these planets
+The most famous and cited treatise on the mass radius relation is
+\citet{zapolsky}'s work ``The Mass-Radius Relation For Cold Spheres of
+Low Mass''. In this work, they argue that the mass of a cold
+star/planet/brown dwarf peaks around 1 Jupiter radius, as seen in
+Figure \ref{zapolfig}. To understand why these curves peak, one can
+examine the low mass and high mass extremes. For low mass planets,
+where the pressure is due to Coulomb interactions, the central
+material is essentially incompressible. For these planets
 \begin{equation}
 \rho \approx \frac{M}{\frac{4}{3} \pi R^3} \approx constant
 \end{equation}
@@ -43,7 +68,10 @@ Therefore, for this kind of equation of state, the radius grows as
 \begin{equation}
 R \propto M^{1/3}
 \end{equation}
-. At large masses, the core becomes electron degenerate. If we assume non-relativistic electrons, each one has energy $\epsilon = p^2/2 m_e$. Using the Heisenberg uncertainty principle, $\sigma_p \sigma_x \approx p x = \hbar$. The electron density is
+. At large masses, the core becomes electron degenerate. If we assume
+non-relativistic electrons, each one has energy $\epsilon = p^2/2
+m_e$. Using the Heisenberg uncertainty principle, $\sigma_p \sigma_x
+\approx p x = \hbar$. The electron density is
 \begin{equation}
 n_e = \frac{1}{x^3}
 \end{equation}
@@ -51,7 +79,11 @@ so each particle has an energy $\epsilon = n_e^{2/3} \hbar^2 / 2m_e$. The Virial
 \begin{equation}\label{vt}
 \zeta E_i = - E_g \approx \frac{G M^2}{R}
 \end{equation}
-where $E_i$ is the internal energy, $E_g$ is the gravitational potential energy and $\zeta$ is a dimensionless parameter \citep{kippenhahn}. If there are $\sim M/m_p$ particles where $M$ is the total mass and $m_p$ is the mass of a proton, then the total internal energy is
+where $E_i$ is the internal energy, $E_g$ is the gravitational
+potential energy and $\zeta$ is a dimensionless parameter
+\citep{kippenhahn}. If there are $\sim M/m_p$ particles where $M$ is
+the total mass and $m_p$ is the mass of a proton, then the total
+internal energy is
 \begin{equation} \label{intE}
 E_i = \frac{M}{m_p} \epsilon = \frac{M n_e^{2/3} \hbar^2}{2 m_p m_e}
 \end{equation}
@@ -59,7 +91,12 @@ Using Equation \ref{vt} and \ref{intE}, the fact that the $n_e \propto M/R^3$ th
 \begin{equation}\label{degenMR}
 R \propto M^{-1/3}.
 \end{equation}
-The radius must peak between these two extremes and \citep{zapolsky} find numerically that the peak is very close to Jupiter's radius (1.03 $R_J$) for a 75 \% H and 25 \% helium planet. For pure hydrogen, the peak is (1.20 $R_J$) but this cannot explain the inflated radii of exoplanets because you'd need a process to systematically remove all helium and heavy elements from the planet.
+The radius must peak between these two extremes and \citep{zapolsky}
+find numerically that the peak is very close to Jupiter's radius (1.03
+$R_J$) for a 75 \% H and 25 \% helium planet. For pure hydrogen, the
+peak is (1.20 $R_J$) but this cannot explain the inflated radii of
+exoplanets because you'd need a process to systematically remove all
+helium and heavy elements from the planet.
 
 \begin{figure}[!htbp]
 \begin{center}
@@ -72,11 +109,28 @@ The radius must peak between these two extremes and \citep{zapolsky} find numeri
 \end{figure}
 
 \section{Observations}
-Observations of planetary inflation began with the first discovered transiting planet (HD209458b) \citep{charb,henry2000}. HD209458b has a radius of 1.15 $\pm 0.06 R_J$ but a mass of only 0.64 $M_J$.\footnote{www.exoplanet.eu} A large fraction of subsequent measurements were also anomalously large. Figure \ref{chabrierfig} shows a recent compilation of known planets, brown dwarfs and low mass stars. The distinction between brown dwarfs and low mass stars is that the brown dwarfs to not have sustained nuclear fusion of light hydrogen. Since the temperature needed for the $pp$ chain is $10^7$ K, the approximate mass of the transition is
+Observations of planetary inflation began with the first discovered
+transiting planet (HD209458b) \citep{charb,henry2000}. HD209458b has a
+radius of 1.15 $\pm 0.06 R_J$ but a mass of only 0.64
+$M_J$.\footnote{www.exoplanet.eu} A large fraction of subsequent
+measurements were also anomalously large. Figure \ref{chabrierfig}
+shows a recent compilation of known planets, brown dwarfs and low mass
+stars. The distinction between brown dwarfs and low mass stars is that
+the brown dwarfs to not have sustained nuclear fusion of light
+hydrogen. Since the temperature needed for the $pp$ chain is $10^7$ K,
+the approximate mass of the transition is
 \begin{equation}
 k 10^7 K \frac{M}{\mu mp} \approx -\frac{3}{5} \frac{G M^2}{R_J}
 \end{equation}
-give 40 $M_J$ and the actual value is 79 $M_J$ \citep{chabrier2010}. This divide is pictured as a vertical dashed line in Figure \ref{chabrierfig}. The other limit, between brown dwarfs and planets is not clearly defined by a single mass. Brown dwarfs are distinguished from planets in their formation process -- cloud fragmentation instead of accretion of materials from a protoplanetary disk. An arbitrary mass of 13 $M_J$ is customarily chosen but brown dwarfs can have smaller masses and planets can have larger ones.
+give 40 $M_J$ and the actual value is 79 $M_J$
+\citep{chabrier2010}. This divide is pictured as a vertical dashed
+line in Figure \ref{chabrierfig}. The other limit, between brown
+dwarfs and planets is not clearly defined by a single mass. Brown
+dwarfs are distinguished from planets in their formation process --
+cloud fragmentation instead of accretion of materials from a
+protoplanetary disk. An arbitrary mass of 13 $M_J$ is customarily
+chosen but brown dwarfs can have smaller masses and planets can have
+larger ones.
 
 \begin{figure}[!htbp]
 \begin{center}
@@ -86,7 +140,19 @@ give 40 $M_J$ and the actual value is 79 $M_J$ \citep{chabrier2010}. This divide
 \end{center}
 \end{figure}
 
-Selection biases strongly favor close by exoplanets ($< $ 0.1 AU) because of their enhanced radial velocity signal and greater probability of transit detection. The flux from the star at these distances is greater than 1000$\times$ the flux at Jupiter's radius, so stellar irradiation plays a large role in the evolution of these planets. If the planets formed farther out and migrated inward, the increased stellar flux would not greatly affect the planet's interior. Their atmospheres could puff up in this case, but their radii would still be close to $\sim 1 R_J$ \citep{burrows2000}. If the planets formed nearby their host stars, the increased stellar radiation can keep the radii of these hot Jupiters at radii of 1.2 $R_J$ after 1 Gyr. However, radiation alone cannot explain the observed radii, which are up to 1.7 $R_J$ \citep{fortneyRev10}.
+Selection biases strongly favor close by exoplanets ($< $ 0.1 AU)
+because of their enhanced radial velocity signal and greater
+probability of transit detection. The flux from the star at these
+distances is greater than 1000$\times$ the flux at Jupiter's radius,
+so stellar irradiation plays a large role in the evolution of these
+planets. If the planets formed farther out and migrated inward, the
+increased stellar flux would not greatly affect the planet's
+interior. Their atmospheres could puff up in this case, but their
+radii would still be close to $\sim 1 R_J$ \citep{burrows2000}. If the
+planets formed nearby their host stars, the increased stellar
+radiation can keep the radii of these hot Jupiters at radii of 1.2
+$R_J$ after 1 Gyr. However, radiation alone cannot explain the
+observed radii, which are up to 1.7 $R_J$ \citep{fortneyRev10}.
 
 \section{Heating Models}
 An additional source of heat is required to increase the radii of planets, such as WASP-15b with 1.45 $R_J$ and WASP-12b with 1.75 $R_J$. Figure \ref{ibguiheat} shows the amount of heating necessary for these planets. \citet{ibgui2010} predict that higher metallicity objects have larger radii because of their increased opacity. However, in order to have a high metallicity atmosphere, a process to combat gravitational settling of the heavy elements.
@@ -98,9 +164,26 @@ An additional source of heat is required to increase the radii of planets, such 
 \end{center}
 \end{figure}
 \subsubsection{Ohmic Dissipation}
-Recently, \citet{batygin10} suggested that Ohmic dissipation may be responsible for the inflation of hot Jupiter radii. Their models assume a magnetic field of 10 G, about twice that of Jupiter's, and strong thermally drive zonal jets. The changing magnetic field seen by the winds induces a current in the planet that circulates well below 1 bar. These currents have an associated resistance and therefore provide some ohmic heating within the planet. \citet{batygin10} claim that $10^18$ to $10^20$ W can be injected in the planet. The assumptions in this model have yet to be tested, but some winds have been observed on planets. The only empirical study of exoplanet magnetospheres is an upper limit on WASP-12b's field of 24 G \citep{vidotto10}.
+Recently, \citet{batygin10} suggested that Ohmic dissipation may be
+responsible for the inflation of hot Jupiter radii. Their models
+assume a magnetic field of 10 G, about twice that of Jupiter's, and
+strong thermally drive zonal jets. The changing magnetic field seen by
+the winds induces a current in the planet that circulates well below 1
+bar. These currents have an associated resistance and therefore
+provide some ohmic heating within the planet. \citet{batygin10} claim
+that $10^18$ to $10^20$ W can be injected in the planet. The
+assumptions in this model have yet to be tested, but some winds have
+been observed on planets. The only empirical study of exoplanet
+magnetospheres is an upper limit on WASP-12b's field of 24 G
+\citep{vidotto10}.
 \subsubsection{Tidal Dissipation}
-Beginning with \citet{bodenheimer01}, several teams have suggested that tidal heating may explain Hot Jupiter inflation. Planets with a significant eccentricity, such as when they are pumped by an additional planet can be tidally damped by their stars. However, accurate transit timing has ruled out this possibility for several exoplanets, whose eccentricity is consistent with zero \citet{forneyRev10}.
+Beginning with \citet{bodenheimer01}, several teams have suggested
+that tidal heating may explain Hot Jupiter inflation. Planets with a
+significant eccentricity, such as when they are pumped by an
+additional planet can be tidally damped by their stars. However,
+accurate transit timing has ruled out this possibility for several
+exoplanets, whose eccentricity is consistent with zero
+\citet{forneyRev10}.
 \subsubsection{Wave Transport}
 The heat needed to inflate the planet is only a fraction of the incident flux from the star \citep{ibgui2010}.
 \subsubsection{Thermal Tides}
@@ -108,7 +191,10 @@ The heat needed to inflate the planet is only a fraction of the incident flux fr
 \begin{figure*}[!htbp]
 \begin{center}
 \includegraphics[width=6in]{mesa_mr_results.pdf}
-\caption{MESA simulations of two brown dwarfs, M=42 $M_J$, M=21 $M_J$, a low mass star with M=84 $M_J$ and a planet with mass M= 11 $M_J$. Notice that in the early stages of evolution, the more massive objects have larger radii whereas in the late stages, mass decreases with radius.}
+\caption{MESA simulations of two brown dwarfs, M=42 $M_J$, M=21 $M_J$,
+ a low mass star with M=84 $M_J$ and a planet with mass M= 11 $M_J$.
+  Notice that in the early stages of evolution, the more massive objects
+  s have larger radii whereas in the late stages, mass decreases with radius.}
 \label{mesaMR}
 \end{center}
 \end{figure*}
